@@ -17,7 +17,7 @@ export function fetchRecentPosts() {
 
 export function fetchPostsWithQuery(query) {
     return function(dispatch) {
-        axios.get('https://swapi.dev/api/people/?search?q=${query}')
+        axios.get('https://swapi.dev/api/people/?search=${query}')
         .then(response => {
             console.log('response', response.data.results);
         //     dispatch({
